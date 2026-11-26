@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An interactive mystery story set in a mountain observatory where the stars are going out. For teenage readers of English (B1).">
+<meta name="theme-color" content="#070b18">
+<title>The Night the Stars Went Out — an interactive story</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l3.2 10.8L30 16l-10.8 3.2L16 30l-3.2-10.8L2 16l10.8-3.2z' fill='%23e8b45a'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div id="aurora" aria-hidden="true"></div>
+<div id="vignette" aria-hidden="true"></div>
+
+<div id="app">
+  <header id="topbar" hidden>
+    <div class="topbar-left">
+      <span id="chapter-label" class="chapter-label"></span>
+    </div>
+    <div class="topbar-right">
+      <div id="progressbar" role="progressbar" aria-label="Story progress"><i id="progressfill"></i></div>
+      <button id="btn-textsize" class="ghost-btn" type="button" aria-label="Change text size" title="Text size">A</button>
+      <button id="btn-motion" class="ghost-btn" type="button" aria-label="Toggle motion" title="Motion">✦</button>
+    </div>
+  </header>
+  <main id="stage" tabindex="-1"></main>
+</div>
+
+<script src="js/background.js"></script>
+<script src="js/story-part1.js"></script>
+<script src="js/story-part2.js"></script>
+<script src="js/engine.js"></script>
+</body>
+</html>
